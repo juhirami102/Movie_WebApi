@@ -19,6 +19,8 @@
 
   <ItemGroup>
     <Folder Include="Files\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 
 

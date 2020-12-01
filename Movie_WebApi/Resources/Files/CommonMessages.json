@@ -1,0 +1,119 @@
+[
+  {
+    "Key": "GetAllList",
+    "Value": "All Data list",
+    "Type": "Success",
+    "Description": "This key helps to display the number of records when GetAll on all controllers"
+  },
+  {
+    "Key": "GetById",
+    "Value": "Data retrieved successfully",
+    "Type": "Success",
+    "Description": "This key helps to display the message in response for GetById on all controllers"
+  },
+  {
+    "Key": "Update",
+    "Value": "Data Updated successfully",
+    "Type": "Success",
+    "Description": "This key helps to display the message in response for Update on all controllers"
+  },
+  {
+    "Key": "Save",
+    "Value": "Data saved successfully",
+    "Type": "Success",
+    "Description": "This key helps to display the message in response for Save on all controllers"
+  },
+  {
+    "Key": "Delete",
+    "Value": "Data deleted successfully",
+    "Type": "Success",
+    "Description": "This key helps to display the message in response for Delete on all controllers"
+  },
+  {
+    "Key": "Exist",
+    "Value": "Data Already Exist",
+    "Type": "Failed",
+    "Description": "This key helps to display that specific criteria data already exists in database"
+  },
+  {
+    "Key": "OTPValidation",
+    "Value": "OTP Validation Failed",
+    "Type": "Failed",
+    "Description": "This key helps to display to Validate OTP"
+  },
+  {
+    "Key": "FileUploadFailed",
+    "Value": "files upload failed",
+    "Type": "Failed",
+    "Description": "This key helps to display failed while uploading TUV files"
+  },
+  {
+    "Key": "AddFailed",
+    "Value": "Add Failed",
+    "Type": "Failed",
+    "Description": "This key helps to display the message in response when entity fails to Add",
+    "KeyCode": 0,
+    "CreatedBy": 1,
+    "CreatedOn": "07/06/2016"
+  },
+  {
+    "Key": "UpdateFailed",
+    "Value": "Update Failed.",
+    "Type": "Failed",
+    "Description": "This key helps to display the message in response when entity fails to update",
+    "KeyCode": 0,
+    "CreatedBy": 1,
+    "CreatedOn": "07/06/2016"
+  },
+  {
+    "Key": "NotFound",
+    "Value": "Data Not Found",
+    "Type": "Failed",
+    "Description": "This key helps to display the message in response when return or response data null",
+    "KeyCode": 0,
+    "CreatedBy": 1,
+    "CreatedOn": "07/12/2020"
+  },
+  {
+    "Key": "Success",
+    "Value": "Success",
+    "Type": "Success",
+    "Description": "This key helps to display notification type Success"
+  },
+  {
+    "Key": "DeleteFailed",
+    "Value": "Delete Failed.",
+    "Type": "Failed",
+    "Description": "This key helps to display the message in response when entity fails to Delete",
+    "KeyCode": 0,
+    "CreatedBy": 1,
+    "CreatedOn": "07/06/2020"
+  },
+  {
+    "Key": "SignUpFailed",
+    "Value": "Sign up Failed. Only @RoleName type user Allowed.",
+    "Type": "Failed",
+    "Description": "This key helps to display the message in response when try to register user with Specific roles",
+    "KeyCode": 0,
+    "CreatedBy": 1,
+    "CreatedOn": "07/06/2016"
+  },
+  {
+    "Key": "ReferalCodeFailed",
+    "Value": "Referal Code Not Exist.",
+    "Type": "Failed",
+    "Description": "This key helps to display the message in response when try to register user with referal code but not found",
+    "KeyCode": 0,
+    "CreatedBy": 1,
+    "CreatedOn": "07/06/2016"
+  },
+  {
+    "Key": "OTPFailed",
+    "Value": "OTP Session Expired. Please regenerate OTP and try.",
+    "Type": "Failed",
+    "Description": "This key helps to display the message in response when OTP session expired",
+    "KeyCode": 0,
+    "CreatedBy": 1,
+    "CreatedOn": "24/04/2020"
+  }
+]

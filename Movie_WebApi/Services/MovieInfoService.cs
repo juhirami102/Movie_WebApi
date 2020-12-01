@@ -14,46 +14,39 @@ namespace Movie_WebApi.Services
 {
     public class MovieInfoService : IMovieInfoService
     {
-        public int Add(Movie placeInfo)
-        {
-            throw new NotImplementedException();
-        }
-
         //public int Add(Movie placeInfo)
         //{
-        //    string sQry = "INSERT INTO [BillGatesPlaceInfo] ([Place],[About],[City],[State],[Country]) " +
-        //        "VALUES('" + placeInfo.Place + "','" + placeInfo.About + "','" + placeInfo.City + "','" + 
-        //        placeInfo.State + "','" + placeInfo.Country + "')";
-        //    int retVal=ExecuteCRUDByQuery(sQry);
-        //    return retVal;
+        //    throw new NotImplementedException();
         //}
 
-        public int AddRange(IEnumerable<Movie> places)
-        {
-            throw new NotImplementedException();
-        }
+    
 
-        public Movie Find(int id)
-        {
-            throw new NotImplementedException();
-        }
+        //public int AddRange(IEnumerable<Movie> places)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public IEnumerable<Movie> GetAll()
-        {
-            throw new NotImplementedException();
-        }
+        //public Movie Find(int id)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public int Remove(int id)
-        {
-            throw new NotImplementedException();
-        }
+        //public IEnumerable<Movie> GetAll()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //public int Remove(int id)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
  
 
-        public int Update(Movie placeInfo)
-        {
-            throw new NotImplementedException();
-        }
+        //public int Update(Movie placeInfo)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
       
 
@@ -76,7 +69,13 @@ namespace Movie_WebApi.Services
             }
             
         }
-
+        public async Task<Movie> GetMovieById(int id)
+        {
+            var Movie = await _repository.GetAsync(id);
+            if (Movie == null)
+                return null;
+            return _mapperFactory.Get<BrandMaster, BrandMasterEntity>(Movie);
+        }
         public List<Movie> ReadCSVFile(string location)
         {
             try
