@@ -24,6 +24,12 @@
     "Description": "This key helps to display the message in response for Save on all controllers"
   },
   {
+    "Key": "SaveMessage",
+    "Value": "Saved to a database",
+    "Type": "Success",
+    "Description": "This key helps to display the message in response for Save on all controllers"
+  },
+  {
     "Key": "Delete",
     "Value": "Data deleted successfully",
     "Type": "Success",

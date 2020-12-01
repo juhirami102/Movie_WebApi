@@ -30,14 +30,13 @@ namespace Movie_WebApi.Controllers
         #endregion
 
         #region Constructor
-        public MovieMasterController(IMovieInfoService MovieService, IConfiguration configuration, IListResponseHandler<Model.Movie> ListResponse,
-            IObjectResponseHandler<Model.Movie> ObjectResponse, IDataTableResponseHandler<BrandMasterEntity> DatatableResponse, IResourceService messageService, IHostingEnvironment hostingEnvironment)
+        public MovieMasterController(IMovieInfoService MovieService, IConfiguration configuration, IListResponseHandler<Movie> ListResponse,
+            IObjectResponseHandler<Movie> ObjectResponse,IResourceService messageService, IHostingEnvironment hostingEnvironment)
         {
             _MovieService = IMovieInfoService;
             _configuration = configuration;
             _ObjectResponse = ObjectResponse;
             _ListResponse = ListResponse;
-            _DatatableResponse = DatatableResponse;
             _messageService = messageService;
             _hostingEnvironment = hostingEnvironment;
         }
@@ -51,9 +50,11 @@ namespace Movie_WebApi.Controllers
         [HttpPost("UploadFile")]
         public async Task Upload(IFormFile file)
         {
+            var response = _ObjectResponse;
             var csvPath = Path.Combine(_hostingEnvironment.ContentRootPath, "Files\\"+ Request.Form.Files[0].FileName);
+           
             _fileUploader.ReadCSVFile(csvPath);
-          
+           response = _ObjectResponse.Create(OMovie, _messageService.GetString("SaveMessage"));
         }
 
         [HttpGet, Route("GetMovieById/{id}")]
@@ -61,9 +62,7 @@ namespace Movie_WebApi.Controllers
         {
             var response = _ObjectResponse;
             var OMovie = new Movie();
-
             OMovie = await _MovieService.GetMovieById(id);
-
             if (OMovie != null)
             {
                 if (OMovie.BrandImage != null)

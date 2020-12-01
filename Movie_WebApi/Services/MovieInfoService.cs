@@ -14,40 +14,7 @@ namespace Movie_WebApi.Services
 {
     public class MovieInfoService : IMovieInfoService
     {
-        //public int Add(Movie placeInfo)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-    
-
-        //public int AddRange(IEnumerable<Movie> places)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public Movie Find(int id)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public IEnumerable<Movie> GetAll()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public int Remove(int id)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
- 
-
-        //public int Update(Movie placeInfo)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
+       
       
 
         public void WriteCSVFile(string path, List<Movie> mv)
@@ -74,7 +41,7 @@ namespace Movie_WebApi.Services
             var Movie = await _repository.GetAsync(id);
             if (Movie == null)
                 return null;
-            return _mapperFactory.Get<BrandMaster, BrandMasterEntity>(Movie);
+            return _mapperFactory.Get<Movie, Movie>(Movie);
         }
         public List<Movie> ReadCSVFile(string location)
         {
