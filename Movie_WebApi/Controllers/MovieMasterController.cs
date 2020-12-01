@@ -30,7 +30,7 @@ namespace Movie_WebApi.Controllers
         [HttpPost("single-file")]
         public async Task Upload(IFormFile file)
         {
-            var csvPath = Path.Combine(_hostingEnvironment.ContentRootPath, "Files/"+ Request.Form.Files[0].FileName);
+            var csvPath = Path.Combine(_hostingEnvironment.ContentRootPath, "Files\\"+ Request.Form.Files[0].FileName);
 
             //string csvPath = server.MapPath("~/Files/") + Path.GetFileName(Request.Form.Files[0].FileName);
             _fileUploader.ReadCSVFile(csvPath);

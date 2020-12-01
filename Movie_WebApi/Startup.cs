@@ -37,7 +37,9 @@ namespace Movie_WebApi
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+              //  app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/v2/swagger.json", "PlaceInfo Services"));
             }
 
             app.UseHttpsRedirection();
@@ -50,8 +52,7 @@ namespace Movie_WebApi
             {
                 endpoints.MapControllers();
             });
-            app.UseSwagger();
-            app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/v2/swagger.json", "PlaceInfo Services"));
+           
         }
     }
 }
